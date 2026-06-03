@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio for Alex Guzman, a Computer Science student building Python tools, C++ programs, automation projects, and web experiences.">
+  <title>Alex Guzman | Computer Science Student</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell" id="top">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Alex Guzman portfolio home">
+        <span class="brand-mark"><span>A</span>G</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
+        <a href="./resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="header-action" href="mailto:guzmanalex06@icloud.com">Let's Connect <span aria-hidden="true">-&gt;</span></a>
+    </header>
+
+    <main>
+      <section class="hero section reveal">
+        <div class="hero-copy">
+          <p class="eyebrow">// Hello, I'm</p>
+          <h1><span>Alex</span>Guzman</h1>
+          <p class="hero-title">Computer Science Student </p>
+          <p class="hero-intro">
+            I turn ideas into practical software projects, from automation tools and command-line apps
+            to polished web experiences.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">View My Work <span aria-hidden="true">-&gt;</span></a>
+            <a class="button secondary" href="#contact">Get in Touch</a>
+          </div>
+          <div class="social-row" aria-label="Social links">
+            <a href="https://github.com/AlexG2200" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/alex-guzman-22459b211/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="mailto:guzmanalex06@icloud.com">Email</a>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-label="Portrait and code preview">
+          <div class="shape shape-orange" aria-hidden="true"></div>
+          <div class="shape shape-green" aria-hidden="true"></div>
+          <div class="portrait-wrap">
+            <img src="./pic1.jpg" alt="Photo of Alex Guzman">
+          </div>
+          <div class="code-card">
+            <div class="window-dots" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <pre><code>class Builder {
+  constructor(ideas) {
+    this.ideas = ideas;
+  }
+
+  build() {
+    return "Impact";
+  }
+}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="section projects-section reveal" id="projects">
+        <div class="section-heading row-heading">
+          <div>
+            <p class="eyebrow">// Featured Projects</p>
+            <h2>Things I've Built</h2>
+          </div>
+          <a class="text-link" href="https://github.com/AlexG2200" target="_blank" rel="noreferrer">View all projects <span aria-hidden="true">-&gt;</span></a>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal delay-1">
+            <div class="project-preview preview-data" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <h3>Excel to JSON Converter</h3>
+            <p>A Python tool that converts Excel spreadsheet data into clean JSON for apps, APIs, and automation workflows.</p>
+            <div class="tag-row">
+              <span>Python</span>
+              <span>Excel</span>
+              <span>JSON</span>
+            </div>
+            <a href="https://github.com/AlexG2200/excel-to-json-converter" target="_blank" rel="noreferrer">View Project <span aria-hidden="true">-&gt;</span></a>
+          </article>
+
+          <article class="project-card reveal delay-2">
+            <div class="project-preview preview-terminal" aria-hidden="true">
+              <span>$ weekly-scan</span>
+              <span>plan: aftermarket</span>
+              <span>status: logged</span>
+            </div>
+            <h3>Trade Journal CLI</h3>
+            <p>A lightweight command-line journal for logging trade ideas, Sunday scans, and next-day trading plans.</p>
+            <div class="tag-row">
+              <span>Python</span>
+              <span>CLI</span>
+              <span>Trading</span>
+            </div>
+            <a href="https://github.com/AlexG2200/trade-journal-cli" target="_blank" rel="noreferrer">View Project <span aria-hidden="true">-&gt;</span></a>
+          </article>
+
+          <article class="project-card reveal delay-3">
+            <div class="project-preview preview-grid" aria-hidden="true">
+              <span>Recipe</span>
+              <span>Cost</span>
+              <span>Output</span>
+              <span>Total</span>
+            </div>
+            <h3>Bakery Cost Calculator</h3>
+            <p>A C++ console program that reads product data, calculates bakery costs, and displays formatted results.</p>
+            <div class="tag-row">
+              <span>C++</span>
+              <span>File I/O</span>
+              <span>Arrays</span>
+            </div>
+            <a href="https://github.com/AlexG2200/bakery-cost-calculator-cpp" target="_blank" rel="noreferrer">View Project <span aria-hidden="true">-&gt;</span></a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section info-section reveal" id="about">
+        <div class="about-copy">
+          <p class="eyebrow">// About</p>
+          <h2>Focused on building useful software and learning by doing.</h2>
+          <p>
+            I'm a Computer Science student at Middle Tennessee State University who enjoys taking an idea
+            from a rough sketch to something functional. My current work centers on Python automation,
+            C++ fundamentals, web development, and practical systems for real use cases.
+          </p>
+        </div>
+        <div class="info-panels">
+          <div class="education-panel">
+            <span class="panel-icon" aria-hidden="true">CS</span>
+            <div>
+              <p class="panel-label">Education</p>
+              <h3>Bachelor of Science in Computer Science</h3>
+              <p>Middle Tennessee State University</p>
+            </div>
+          </div>
+          <div class="resume-panel">
+            <span class="panel-icon" aria-hidden="true">PDF</span>
+            <div>
+              <p class="panel-label">Resume</p>
+              <h3>View my latest resume</h3>
+              <a class="button secondary" href="./resume.pdf" target="_blank" rel="noreferrer">Open Resume <span aria-hidden="true">-&gt;</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section skills-section reveal" id="skills">
+        <div class="section-heading row-heading">
+          <div>
+            <p class="eyebrow">// Tech Stack &amp; Tools</p>
+            <h2>Technologies I Work With</h2>
+          </div>
+          <div class="mini-terminal" aria-hidden="true">
+            <span>bin/portfolio.sh</span>
+            <code>echo "Ship. Improve. Repeat."</code>
+          </div>
+        </div>
+
+        <div class="skills-grid">
+          <span>C++</span>
+          <span>Python</span>
+          <span>JavaScript</span>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>Git &amp; GitHub</span>
+          <span>Automation</span>
+          <span>API Integration</span>
+          <span>Data Processing</span>
+          <span>Web Development</span>
+        </div>
+      </section>
+
+      <section class="section services-section reveal" id="services">
+        <div class="section-heading">
+          <p class="eyebrow">// Services</p>
+          <h2>What I can build</h2>
+          <p class="section-copy">
+            Practical software for people and businesses that need clean, useful, and affordable solutions.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal delay-1">
+            <h3>Business Websites</h3>
+            <p>Responsive websites with clear information, fast navigation, and a professional first impression.</p>
+          </article>
+          <article class="service-card reveal delay-2">
+            <h3>Automation Tools</h3>
+            <p>Python tools that organize data, generate reports, and remove repetitive work from your day.</p>
+          </article>
+          <article class="service-card reveal delay-3">
+            <h3>Custom Systems</h3>
+            <p>Dashboards, scripts, bots, and workflow tools shaped around a specific real-world problem.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact-section reveal" id="contact">
+        <div class="cta-icon" aria-hidden="true">@</div>
+        <div>
+          <p class="eyebrow">// Contact</p>
+          <h2>Let's build something useful.</h2>
+          <p>I'm open to projects, freelance work, and conversations about practical software ideas.</p>
+        </div>
+        <a class="button primary" href="mailto:guzmanalex06@icloud.com">Let's Connect <span aria-hidden="true">-&gt;</span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#top" aria-label="Back to top">
+        <span class="brand-mark"><span>A</span>G</span>
+      </a>
+      <span>&copy; <span id="year"></span> Alex Guzman. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="https://github.com/AlexG2200" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/alex-guzman-22459b211/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="mailto:guzmanalex06@icloud.com">Email</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
