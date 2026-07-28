@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How Alex Guzman built an Excel-to-JSON converter during HackMT 2026 to prepare collectible data for the Collectivity team project.">
+  <meta property="og:title" content="Excel to JSON Converter | Alex Guzman">
+  <meta property="og:description" content="A HackMT 2026 Python project that converted Collectivity spreadsheet data into validated JSON.">
+  <meta property="og:type" content="website">
+  <title>Excel to JSON Converter | Alex Guzman</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <div class="page-shell" id="top">
+    <header class="site-header">
+      <a class="brand" href="../index.html#top" aria-label="Alex Guzman portfolio home">
+        <span class="brand-mark"><span>A</span>G</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../about.html">About</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#services">Focus</a>
+        <a href="../resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+
+      <a class="header-action" href="mailto:guzmanalex06@icloud.com">Let's Connect <span aria-hidden="true">-&gt;</span></a>
+    </header>
+
+    <main>
+      <section class="section project-detail reveal">
+        <a class="text-link back-link" href="../index.html#projects"><span aria-hidden="true">&lt;-</span> Back to projects</a>
+        <div class="project-detail-hero">
+          <div>
+            <p class="eyebrow">// HackMT 2026 Project</p>
+            <h1><span>Excel to JSON</span>Converter</h1>
+            <p class="hero-intro">
+              A Python CLI tool I built during my first hackathon to transform Collectivity's spreadsheet data
+              into structured, validated JSON our team could import into the application.
+            </p>
+            <div class="tag-row">
+              <span>Python</span>
+              <span>Pandas</span>
+              <span>Excel</span>
+              <span>JSON</span>
+            </div>
+            <div class="hero-actions">
+              <a class="button primary" href="#walkthrough">Try Walkthrough <span aria-hidden="true">-&gt;</span></a>
+              <a class="button secondary" href="https://github.com/AlexG2200/excel-to-json-converter" target="_blank" rel="noreferrer">View Source</a>
+              <a class="button secondary" href="https://github.com/Kensey-McDowell/HackMT-2026-Collectivity" target="_blank" rel="noreferrer">View Collectivity</a>
+            </div>
+          </div>
+
+          <div class="project-facts" aria-label="Project facts">
+            <div>
+              <strong>21</strong>
+              <span>records exported</span>
+            </div>
+            <div>
+              <strong>4</strong>
+              <span>invalid rows flagged</span>
+            </div>
+            <div>
+              <strong>9</strong>
+              <span>columns validated</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section project-story-section reveal">
+        <div class="project-story-copy">
+          <p class="eyebrow">// The Story</p>
+          <h2>Finding a way to contribute at my first hackathon</h2>
+          <p>
+            Our team was building Collectivity, a website designed to securely organize digital and physical
+            collectibles. We had entered item information into an Excel spreadsheet, but the application needed
+            structured JSON that could be imported and used by the rest of the project.
+          </p>
+          <p>
+            I was worried that I wasn't going to be able to contribute much at my first-ever hackathon. Instead, I took the
+            data problem and independently built the converter. The completed tool was used by the team to turn
+            the spreadsheet into application-ready JSON.
+          </p>
+        </div>
+
+        <aside class="story-callout">
+          <p class="panel-label">My Contribution</p>
+          <h3>Spreadsheet-to-application data bridge</h3>
+          <p>I designed and implemented the converter independently as part of the Collectivity team project.</p>
+        </aside>
+      </section>
+
+      <section class="section walkthrough-section reveal" id="walkthrough">
+        <div class="section-heading">
+          <p class="eyebrow">// Interactive Walkthrough</p>
+          <h2>From spreadsheet rows to validated JSON</h2>
+          <p class="section-copy">
+            This walkthrough uses the original HackMT spreadsheet data and output. It demonstrates the conversion flow in the
+            browser; the Python CLI itself runs locally.
+          </p>
+        </div>
+
+        <div class="walkthrough-shell" data-converter-walkthrough>
+          <div class="walkthrough-toolbar">
+            <div>
+              <span class="walkthrough-step-label">Input file</span>
+              <strong>Collectivity workbook</strong>
+            </div>
+            <button class="button primary walkthrough-run" type="button" data-run-converter>
+              Run converter.py <span aria-hidden="true">-&gt;</span>
+            </button>
+          </div>
+
+          <div class="walkthrough-grid">
+            <div class="walkthrough-pane">
+              <div class="walkthrough-pane-header">
+                <span>Reconstructed input preview</span>
+                <span>4 of 21 records shown</span>
+              </div>
+              <div class="spreadsheet-scroll">
+                <table class="spreadsheet-preview">
+                  <thead>
+                    <tr>
+                      <th>Category</th>
+                      <th>Sub-Category</th>
+                      <th>Name</th>
+                      <th>Status</th>
+                      <th>Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Card</td>
+                      <td>Pokemon</td>
+                      <td>2005 Pokemon Japanese Play Espeon</td>
+                      <td class="empty-cell">blank</td>
+                      <td>48000</td>
+                    </tr>
+                    <tr>
+                      <td>Card</td>
+                      <td>Yu-Gi-Oh</td>
+                      <td>2002 Gaia the Fierce Knight</td>
+                      <td class="empty-cell">blank</td>
+                      <td>4560</td>
+                    </tr>
+                    <tr>
+                      <td>Game Items</td>
+                      <td>Console</td>
+                      <td>Nintendo 64 Launch Edition</td>
+                      <td class="empty-cell">blank</td>
+                      <td>75000</td>
+                    </tr>
+                    <tr class="invalid-row">
+                      <td>Game Items</td>
+                      <td>Merch</td>
+                      <td class="empty-cell">blank</td>
+                      <td class="empty-cell">blank</td>
+                      <td class="empty-cell">blank</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="walkthrough-pane terminal-pane">
+              <div class="walkthrough-pane-header">
+                <span>Terminal</span>
+                <span data-terminal-status>Ready</span>
+              </div>
+              <pre class="walkthrough-terminal" aria-live="polite"><code data-terminal-output>$ python converter.py
+Enter file to convert: [Collectivity workbook]
+
+Press "Run converter.py" to continue.</code></pre>
+            </div>
+          </div>
+
+          <div class="walkthrough-result" data-converter-result hidden>
+            <div class="walkthrough-result-copy">
+              <div>
+                <span class="walkthrough-step-label">Generated output</span>
+                <strong>collectibles.json <span class="output-note">(project copy)</span></strong>
+              </div>
+              <span class="result-badge">Conversion complete</span>
+            </div>
+            <pre class="json-preview"><code>{
+  "count": 21,
+  "items": [
+    {
+      "category": "Card",
+      "sub_category": "Pokemon",
+      "name": "2005 Pokemon Japanese Play Espeon",
+      "price": 48000,
+      "valid": true
+    },
+    {
+      "category": "Game Items",
+      "sub_category": "Merch",
+      "name": null,
+      "price": null,
+      "valid": false,
+      "errors": ["name"]
+    }
+  ]
+}</code></pre>
+          </div>
+
+          <div class="walkthrough-downloads">
+            <a class="button secondary" href="./assets/excel-to-json/collectibles.json" download>Download Actual HackMT JSON</a>
+            <a class="button secondary" href="./assets/excel-to-json/HackMT2026.xlsx" download>Download Actual HackMT Excel</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section process-section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">// How It Works</p>
+          <h2>A simple workflow</h2>
+        </div>
+        <ol class="process-list">
+          <li>
+            <span>01</span>
+            <div>
+              <h3>Load</h3>
+              <p>Accept a spreadsheet filename and load one worksheet into a Pandas DataFrame.</p>
+            </div>
+          </li>
+          <li>
+            <span>02</span>
+            <div>
+              <h3>Validate</h3>
+              <p>Verify that the expected nine spreadsheet columns are available before processing.</p>
+            </div>
+          </li>
+          <li>
+            <span>03</span>
+            <div>
+              <h3>Clean</h3>
+              <p>Remove fully empty rows, fill down categories, normalize prices, and convert blank cells to null.</p>
+            </div>
+          </li>
+          <li>
+            <span>04</span>
+            <div>
+              <h3>Flag</h3>
+              <p>Mark records invalid when required Category or Name values are missing and record the errors.</p>
+            </div>
+          </li>
+          <li>
+            <span>05</span>
+            <div>
+              <h3>Export</h3>
+              <p>Write the records, timestamp, and total count to a formatted output.json file.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section learning-grid reveal">
+        <article class="detail-panel learning-panel">
+          <p class="panel-label">Challenge</p>
+          <h2>Learning spreadsheet processing under a deadline</h2>
+          <p>
+            I had never handled spreadsheets with Python before the hackathon. I worked through documentation and
+            YouTube tutorials, then asked my team questions or used AI when those resources did not resolve a specific
+            logic issue. The implementation was my own, supported by persistence and plenty of energy drinks.
+          </p>
+        </article>
+
+        <article class="detail-panel">
+          <p class="panel-label">What I Learned</p>
+          <ul class="detail-list">
+            <li>How Pandas loads and transforms spreadsheet data.</li>
+            <li>How to validate imperfect input instead of assuming every row is complete.</li>
+            <li>How to research unfamiliar concepts and deliver under time pressure.</li>
+            <li>How solving one specific problem can help the whole team move forward.</li>
+          </ul>
+        </article>
+
+        <article class="detail-panel">
+          <p class="panel-label">Current Limitations</p>
+          <ul class="detail-list">
+            <li>Processes one worksheet at a time.</li>
+            <li>Uses a fixed nine-column schema.</li>
+            <li>Writes to a fixed output.json filename.</li>
+            <li>Runs as a local command-line program.</li>
+          </ul>
+        </article>
+
+        <article class="detail-panel">
+          <p class="panel-label">Future Improvements</p>
+          <ul class="detail-list">
+            <li>Flexible column mapping and output naming.</li>
+            <li>Multiple-sheet conversion.</li>
+            <li>Clearer command-line arguments and error messages.</li>
+            <li>A browser interface for uploading and converting files.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section contact-section reveal">
+        <div class="cta-icon" aria-hidden="true">GH</div>
+        <div>
+          <p class="eyebrow">// Project Repositories</p>
+          <h2>Review the code and team project.</h2>
+          <p>See the converter implementation or explore the larger Collectivity application it supported.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="button primary" href="https://github.com/AlexG2200/excel-to-json-converter" target="_blank" rel="noreferrer">Converter Source <span aria-hidden="true">-&gt;</span></a>
+          <a class="button secondary" href="https://github.com/Kensey-McDowell/HackMT-2026-Collectivity" target="_blank" rel="noreferrer">Collectivity Repo</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html#top" aria-label="Back to home">
+        <span class="brand-mark"><span>A</span>G</span>
+      </a>
+      <span>&copy; <span id="year"></span> Alex Guzman. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="../index.html#projects">Projects</a>
+        <a href="https://github.com/AlexG2200" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="mailto:guzmanalex06@icloud.com">Email</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

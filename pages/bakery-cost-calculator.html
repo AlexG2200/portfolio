@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How Alex Guzman used C++ file input, arrays, functions, and formatted output to calculate the production cost of bakery products.">
+  <meta property="og:title" content="Bakery Cost Calculator | Alex Guzman">
+  <meta property="og:description" content="A C++ fundamentals project that calculates bakery product costs from ingredient data stored in files.">
+  <meta property="og:type" content="website">
+  <title>Bakery Cost Calculator | Alex Guzman</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <div class="page-shell" id="top">
+    <header class="site-header">
+      <a class="brand" href="../index.html#top" aria-label="Alex Guzman portfolio home">
+        <span class="brand-mark"><span>A</span>G</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../about.html">About</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#services">Focus</a>
+        <a href="../resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+
+      <a class="header-action" href="mailto:guzmanalex06@icloud.com">Let's Connect <span aria-hidden="true">-&gt;</span></a>
+    </header>
+
+    <main>
+      <section class="section project-detail reveal">
+        <a class="text-link back-link" href="../index.html#projects"><span aria-hidden="true">&lt;-</span> Back to projects</a>
+        <div class="project-detail-hero">
+          <div>
+            <p class="eyebrow">// C++ Fundamentals Project</p>
+            <h1><span>Bakery Cost</span>Calculator</h1>
+            <p class="hero-intro">
+              A C++ console program that reads ingredient and product data from files, calculates production costs,
+              and prints the results in a formatted table.
+            </p>
+            <div class="tag-row">
+              <span>C++</span>
+              <span>File I/O</span>
+              <span>Arrays</span>
+              <span>Functions</span>
+              <span>Console Output</span>
+            </div>
+            <div class="hero-actions">
+              <a class="button primary" href="#walkthrough">Try Walkthrough <span aria-hidden="true">-&gt;</span></a>
+              <a class="button secondary" href="https://github.com/AlexG2200/bakery-cost-calculator-cpp" target="_blank" rel="noreferrer">View Source</a>
+            </div>
+          </div>
+
+          <div class="detail-demo-card bakery-formula-card" aria-label="Bakery cost formula">
+            <div class="window-dots" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <pre><code>product cost =
+sum(
+  ingredient amount
+  * ingredient price
+)
+
+highest cost:
+Cherry Wafer</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="section project-story-section reveal">
+        <div class="project-story-copy">
+          <p class="eyebrow">// The Project</p>
+          <h2>Applying C++ fundamentals to structured data</h2>
+          <p>
+            I built this calculator for my CSCI 2170 course. The assignment gave me a practical way to combine
+            concepts I was learning in C++: opening files, storing related values in arrays, breaking a program into
+            functions, performing calculations with nested loops, and formatting results for the console.
+          </p>
+          <p>
+            The program reads product names from one file and a matrix of ingredient amounts and prices from another.
+            It calculates each product's cost, displays all seven products in a table, and identifies the most
+            expensive item.
+          </p>
+        </div>
+
+        <aside class="story-callout">
+          <p class="panel-label">Why It Is Included</p>
+          <h3>Showing my C++ foundation</h3>
+          <p>This is a smaller project, but it demonstrates how I use core programming concepts to read, process, and present structured data.</p>
+        </aside>
+      </section>
+
+      <section class="section walkthrough-section reveal" id="walkthrough">
+        <div class="section-heading">
+          <p class="eyebrow">// Interactive Walkthrough</p>
+          <h2>From input files to a calculated cost table</h2>
+          <p class="section-copy">
+            The walkthrough uses the same seven products, six ingredients, and calculated prices shown in the
+            project's sample output.
+          </p>
+        </div>
+
+        <div class="walkthrough-shell" data-bakery-walkthrough>
+          <div class="walkthrough-toolbar">
+            <div>
+              <span class="walkthrough-step-label">Input data</span>
+              <strong>7 products x 6 ingredients</strong>
+            </div>
+            <button class="button primary walkthrough-run" type="button" data-run-bakery>
+              Run Calculation <span aria-hidden="true">-&gt;</span>
+            </button>
+          </div>
+
+          <div class="walkthrough-grid bakery-walkthrough-grid">
+            <div class="walkthrough-pane">
+              <div class="walkthrough-pane-header">
+                <span>Ingredient amounts</span>
+                <span>3 of 7 products shown</span>
+              </div>
+              <div class="spreadsheet-scroll">
+                <table class="spreadsheet-preview">
+                  <thead>
+                    <tr>
+                      <th scope="col">Product</th>
+                      <th scope="col">Ing 1</th>
+                      <th scope="col">Ing 2</th>
+                      <th scope="col">Ing 3</th>
+                      <th scope="col">Ing 4</th>
+                      <th scope="col">Ing 5</th>
+                      <th scope="col">Ing 6</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Donut</td>
+                      <td>10</td>
+                      <td>20</td>
+                      <td>50</td>
+                      <td>25</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    <tr>
+                      <td>King Cake</td>
+                      <td>5</td>
+                      <td>50</td>
+                      <td>40</td>
+                      <td>90</td>
+                      <td>0</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Cherry Wafer</td>
+                      <td>12</td>
+                      <td>27</td>
+                      <td>25</td>
+                      <td>10</td>
+                      <td>0</td>
+                      <td>15</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="ingredient-price-scroll">
+                <div class="ingredient-price-row" aria-label="Ingredient unit prices">
+                  <span>Unit prices</span>
+                  <code>$5.14</code>
+                  <code>$10.25</code>
+                  <code>$8.50</code>
+                  <code>$1.50</code>
+                  <code>$20.00</code>
+                  <code>$72.25</code>
+                </div>
+              </div>
+            </div>
+
+            <div class="walkthrough-pane terminal-pane">
+              <div class="walkthrough-pane-header">
+                <span>Console</span>
+                <span data-bakery-status>Ready</span>
+              </div>
+              <pre class="walkthrough-terminal bakery-terminal" aria-live="polite"><code data-bakery-output>$ ./bakery-cost-calculator
+Enter the ingredient data file: [loaded]
+Enter the product names file: [loaded]
+
+Press "Run Calculation" to continue.</code></pre>
+            </div>
+          </div>
+
+          <div class="walkthrough-result" data-bakery-result hidden>
+            <div class="walkthrough-result-copy">
+              <div>
+                <span class="walkthrough-step-label">Calculated output</span>
+                <strong>Cost of Bakery Products Table</strong>
+              </div>
+              <span class="result-badge">7 products calculated</span>
+            </div>
+            <div class="spreadsheet-scroll">
+              <table class="spreadsheet-preview bakery-results-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Cost</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Donut</td><td>$718.90</td></tr>
+                  <tr><td>Bagel</td><td>$225.15</td></tr>
+                  <tr><td>White Bread</td><td>$265.04</td></tr>
+                  <tr><td>Kaiser Roll</td><td>$265.04</td></tr>
+                  <tr><td>King Cake</td><td>$1,085.45</td></tr>
+                  <tr><td>Apple Pie</td><td>$909.87</td></tr>
+                  <tr class="highest-cost-row"><td>Cherry Wafer</td><td>$1,649.68</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="bakery-result-note"><strong>Cherry Wafer</strong> is the most expensive product to make.</p>
+          </div>
+
+          <div class="walkthrough-downloads">
+            <a class="button secondary" href="./assets/bakery-cost-calculator/ingredient-data.dat" download>Download Ingredient Data</a>
+            <a class="button secondary" href="./assets/bakery-cost-calculator/product-names.dat" download>Download Product Names</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section process-section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">// How It Works</p>
+          <h2>A file-to-report workflow</h2>
+        </div>
+        <ol class="process-list">
+          <li>
+            <span>01</span>
+            <div>
+              <h3>Open</h3>
+              <p>Ask for both filenames and keep prompting until each input file opens successfully.</p>
+            </div>
+          </li>
+          <li>
+            <span>02</span>
+            <div>
+              <h3>Read</h3>
+              <p>Load product names, ingredient amounts, and ingredient prices into fixed-size arrays.</p>
+            </div>
+          </li>
+          <li>
+            <span>03</span>
+            <div>
+              <h3>Calculate</h3>
+              <p>Use nested loops to multiply each ingredient amount by its unit price and total each product.</p>
+            </div>
+          </li>
+          <li>
+            <span>04</span>
+            <div>
+              <h3>Compare</h3>
+              <p>Scan the calculated prices and keep the index of the highest-cost product.</p>
+            </div>
+          </li>
+          <li>
+            <span>05</span>
+            <div>
+              <h3>Print</h3>
+              <p>Use stream formatting to align the ingredient values and display prices to two decimal places.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section learning-grid reveal">
+        <article class="detail-panel learning-panel">
+          <p class="panel-label">Challenge</p>
+          <h2>Keeping related file data aligned</h2>
+          <p>
+            The product names, ingredient quantities, and ingredient prices come from separate parts of the input.
+            The main challenge was storing them so the same product index stayed aligned throughout the calculation
+            and output. Breaking the work into separate functions made the data flow easier to reason about.
+          </p>
+        </article>
+
+        <article class="detail-panel">
+          <p class="panel-label">What I Practiced</p>
+          <ul class="detail-list">
+            <li>Opening, validating, reading, and closing input file streams.</li>
+            <li>Using one-dimensional and two-dimensional arrays.</li>
+            <li>Passing arrays and values between focused functions.</li>
+            <li>Using nested loops for calculations and formatted table output.</li>
+          </ul>
+        </article>
+
+        <article class="detail-panel">
+          <p class="panel-label">Current Limitations</p>
+          <ul class="detail-list">
+            <li>Uses fixed maximum sizes of 15 products and 20 ingredients.</li>
+            <li>Requires input files to follow a specific numeric format.</li>
+            <li>Displays results only in the console.</li>
+            <li>Calculates production cost but does not include selling price or profit margin.</li>
+          </ul>
+        </article>
+
+        <article class="detail-panel">
+          <p class="panel-label">Possible Improvements</p>
+          <ul class="detail-list">
+            <li>Replace fixed arrays with vectors and structured product types.</li>
+            <li>Add clearer validation for incomplete or malformed data.</li>
+            <li>Export the completed cost table to a file.</li>
+            <li>Add selling-price and profit-margin calculations.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section contact-section reveal">
+        <div class="cta-icon" aria-hidden="true">GH</div>
+        <div>
+          <p class="eyebrow">// Source Code</p>
+          <h2>Review the C++ implementation.</h2>
+          <p>The repository contains the source file, sample datasets, and the complete console output.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="button primary" href="https://github.com/AlexG2200/bakery-cost-calculator-cpp" target="_blank" rel="noreferrer">View Repository <span aria-hidden="true">-&gt;</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html#top" aria-label="Back to home">
+        <span class="brand-mark"><span>A</span>G</span>
+      </a>
+      <span>&copy; <span id="year"></span> Alex Guzman. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="../index.html#projects">Projects</a>
+        <a href="https://github.com/AlexG2200" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="mailto:guzmanalex06@icloud.com">Email</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>

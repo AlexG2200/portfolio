@@ -1,0 +1,120 @@
+{
+    "exported_at": "2026-05-18T21:33:28.740195",
+    "count": 9,
+    "items": [
+        {
+            "category": "Electronics",
+            "sub_category": "Phones",
+            "name": "iPhone 15",
+            "description": "Apple smartphone",
+            "owner": "Alice",
+            "status": "Available",
+            "history": "Purchased Jan 2024",
+            "price": 999,
+            "url_for_pic": "http://example.com/iphone.jpg",
+            "valid": true
+        },
+        {
+            "category": "Electronics",
+            "sub_category": "Phones",
+            "name": "Samsung S24",
+            "description": "Android flagship",
+            "owner": "Bob",
+            "status": "Sold",
+            "history": "Purchased Mar 2023",
+            "price": 850,
+            "url_for_pic": "http://example.com/samsung.jpg",
+            "valid": true
+        },
+        {
+            "category": "Electronics",
+            "sub_category": "Phones",
+            "name": "Google Pixel 8",
+            "description": "Google smartphone",
+            "owner": "Carol",
+            "status": "Available",
+            "history": "Purchased Nov 2023",
+            "price": 699,
+            "url_for_pic": null,
+            "valid": true
+        },
+        {
+            "category": "Furniture",
+            "sub_category": "Seating",
+            "name": "Office Chair",
+            "description": "Ergonomic mesh chair",
+            "owner": "Dave",
+            "status": "Available",
+            "history": "Bought 2022",
+            "price": 350,
+            "url_for_pic": null,
+            "valid": true
+        },
+        {
+            "category": "Furniture",
+            "sub_category": "Seating",
+            "name": "Standing Desk",
+            "description": "Height adjustable desk",
+            "owner": "Eve",
+            "status": "Available",
+            "history": "Bought 2023",
+            "price": 600,
+            "url_for_pic": "http://example.com/desk.jpg",
+            "valid": true
+        },
+        {
+            "category": "Books",
+            "sub_category": "Fiction",
+            "name": null,
+            "description": "Unknown novel",
+            "owner": "Frank",
+            "status": "Available",
+            "history": null,
+            "price": 20,
+            "url_for_pic": null,
+            "valid": false,
+            "errors": [
+                "name"
+            ]
+        },
+        {
+            "category": "Books",
+            "sub_category": "Non-Fiction",
+            "name": "Atomic Habits",
+            "description": "Self-help book",
+            "owner": "Grace",
+            "status": "Available",
+            "history": null,
+            "price": 15,
+            "url_for_pic": "http://example.com/ah.jpg",
+            "valid": true
+        },
+        {
+            "category": "Appliances",
+            "sub_category": "Kitchen",
+            "name": "Air Fryer",
+            "description": "Compact air fryer",
+            "owner": "Hank",
+            "status": "Available",
+            "history": "Bought 2023",
+            "price": 89,
+            "url_for_pic": null,
+            "valid": true
+        },
+        {
+            "category": "Appliances",
+            "sub_category": "Misc",
+            "name": null,
+            "description": "Mystery item",
+            "owner": "Ivan",
+            "status": "Unknown",
+            "history": null,
+            "price": 5,
+            "url_for_pic": null,
+            "valid": false,
+            "errors": [
+                "name"
+            ]
+        }
+    ]
+}

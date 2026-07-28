@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How Alex Guzman built a Python trade journal for organizing weekly ideas and aftermarket plans, with a Flask interface currently in development.">
+  <meta property="og:title" content="Trade Journal CLI | Alex Guzman">
+  <meta property="og:description" content="A Python trade journal for recording structured trade ideas, with a basic Flask interface currently in development.">
+  <meta property="og:type" content="website">
+  <title>Trade Journal CLI | Alex Guzman</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <div class="page-shell" id="top">
+    <header class="site-header">
+      <a class="brand" href="../index.html#top" aria-label="Alex Guzman portfolio home">
+        <span class="brand-mark"><span>A</span>G</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../about.html">About</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#services">Focus</a>
+        <a href="../resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+
+      <a class="header-action" href="mailto:guzmanalex06@icloud.com">Let's Connect <span aria-hidden="true">-&gt;</span></a>
+    </header>
+
+    <main>
+      <section class="section project-detail reveal">
+        <a class="text-link back-link" href="../index.html#projects"><span aria-hidden="true">&lt;-</span> Back to projects</a>
+        <div class="project-detail-hero trade-project-hero">
+          <div>
+            <p class="eyebrow">// Personal Trading Tool</p>
+            <h1><span>Trade Journal</span>CLI</h1>
+            <p class="hero-intro">
+              A Python journal I built to give my weekly trade ideas and next-day plans a consistent structure,
+              now being developed into a Flask web app with a basic interactive interface.
+            </p>
+            <div class="tag-row">
+              <span>Python</span>
+              <span>Flask</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>File I/O</span>
+            </div>
+            <div class="hero-actions">
+              <a class="button primary" href="#walkthrough">Try Walkthrough <span aria-hidden="true">-&gt;</span></a>
+              <a class="button secondary" href="https://github.com/AlexG2200/trade-journal-cli" target="_blank" rel="noreferrer">View Source</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section project-story-section reveal">
+        <div class="project-story-copy">
+          <p class="eyebrow">// The Story</p>
+          <h2>Turning scattered trading notes into a repeatable process</h2>
+          <p>
+            As a trader, I wanted a quick way to record ideas without opening a large platform or rebuilding the
+            same note format every time. Weekly scans and aftermarket plans contain different information, but both
+            are easier to review when each entry follows a consistent structure.
+          </p>
+          <p>
+            I started with a Python command-line journal that saved formatted entries to local text files. I am now
+            building a Flask version with separate forms for weekly ideas and aftermarket scans. The current UI is
+            still basic, but it gives me a foundation for making the journal easier to use in the browser.
+          </p>
+        </div>
+
+        <aside class="story-callout">
+          <p class="panel-label">Why I Built It</p>
+          <h3>A tool based on my own routine</h3>
+          <p>I built the journal around information I already use when preparing trades: ticker, bias, catalyst, key levels, and a written plan.</p>
+        </aside>
+      </section>
+
+      <section class="section walkthrough-section reveal" id="walkthrough">
+        <div class="section-heading">
+          <p class="eyebrow">// Interactive Walkthrough</p>
+          <h2>From a trade idea to a structured journal entry</h2>
+          <p class="section-copy">
+            This browser walkthrough recreates the weekly-idea flow. The real project runs locally and appends each
+            entry to a text file with the current date and time.
+          </p>
+        </div>
+
+        <div class="walkthrough-shell trade-walkthrough" data-trade-walkthrough>
+          <div class="walkthrough-toolbar">
+            <div>
+              <span class="walkthrough-step-label">Journal mode</span>
+              <strong>Weekly Trade Idea</strong>
+            </div>
+            <span class="result-badge" data-trade-status>Ready to log</span>
+          </div>
+
+          <div class="trade-walkthrough-grid">
+            <form class="trade-entry-form" data-trade-form>
+              <div class="walkthrough-pane-header">
+                <span>Trade details</span>
+                <span>Example entry</span>
+              </div>
+              <div class="trade-form-fields">
+                <label for="demo-ticker">Ticker</label>
+                <input id="demo-ticker" name="ticker" type="text" value="AAPL" maxlength="10" required>
+
+                <label for="demo-bias">Bias</label>
+                <select id="demo-bias" name="bias">
+                  <option>Bullish</option>
+                  <option>Bearish</option>
+                  <option>Neutral</option>
+                </select>
+
+                <label for="demo-idea">Trade Idea</label>
+                <textarea id="demo-idea" name="idea" rows="5" required>Wait for a breakout above resistance, then look for a retest before entering.</textarea>
+
+                <button class="button primary" type="submit">
+                  Save Weekly Idea <span aria-hidden="true">-&gt;</span>
+                </button>
+              </div>
+            </form>
+
+            <div class="walkthrough-pane terminal-pane">
+              <div class="walkthrough-pane-header">
+                <span>Journal.txt preview</span>
+                <span data-trade-file-status>Waiting</span>
+              </div>
+              <pre class="walkthrough-terminal trade-output" aria-live="polite"><code data-trade-output>Complete the form and press "Save Weekly Idea" to format the entry.</code></pre>
+            </div>
+          </div>
+
+          <div class="walkthrough-result trade-result" data-trade-result hidden>
+            <div class="walkthrough-result-copy">
+              <div>
+                <span class="walkthrough-step-label">Entry saved</span>
+                <strong>The same format is appended to the local journal file.</strong>
+              </div>
+              <span class="result-badge">Journal updated</span>
+            </div>
+          </div>
+
+          <div class="walkthrough-downloads">
+            <a class="button secondary" href="./assets/trade-journal/sample-journal-entry.txt" download>Download Sample Entry</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section process-section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">// How It Works</p>
+          <h2>A simple journaling workflow</h2>
+        </div>
+        <ol class="process-list">
+          <li>
+            <span>01</span>
+            <div>
+              <h3>Choose</h3>
+              <p>Select a weekly trade idea or an aftermarket scan based on the type of preparation being recorded.</p>
+            </div>
+          </li>
+          <li>
+            <span>02</span>
+            <div>
+              <h3>Enter</h3>
+              <p>Provide the ticker and the details needed for that journal mode, such as bias, catalyst, or key levels.</p>
+            </div>
+          </li>
+          <li>
+            <span>03</span>
+            <div>
+              <h3>Timestamp</h3>
+              <p>Generate the current date and time automatically so every entry records when the plan was created.</p>
+            </div>
+          </li>
+          <li>
+            <span>04</span>
+            <div>
+              <h3>Format</h3>
+              <p>Turn the submitted values into a labeled, readable block instead of storing unorganized notes.</p>
+            </div>
+          </li>
+          <li>
+            <span>05</span>
+            <div>
+              <h3>Save</h3>
+              <p>Append the completed entry to a local text file so earlier plans remain available for review.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section learning-grid reveal">
+        <article class="detail-panel learning-panel">
+          <p class="panel-label">Challenge</p>
+          <h2>Turning a terminal script into a web workflow</h2>
+          <p>
+            The project began as a small command-line program, but I want to make the same process easier to use.
+            While building the Flask version, I am learning how to connect HTML forms to Python routes, process
+            submitted fields, and preserve the journal's existing formatting and file-saving logic.
+          </p>
+        </article>
+
+        <article class="detail-panel">
+          <p class="panel-label">What I Learned</p>
+          <ul class="detail-list">
+            <li>How Flask routes receive and process form submissions.</li>
+            <li>How to separate entry formatting from the interface that collects the data.</li>
+            <li>How timestamps and append-mode file writing support a running journal.</li>
+            <li>How a personal workflow can become a practical software project.</li>
+          </ul>
+        </article>
+
+        <article class="detail-panel">
+          <p class="panel-label">Current Limitations</p>
+          <ul class="detail-list">
+            <li>Runs locally and stores entries in plain text files.</li>
+            <li>Does not display or search previous entries in the interface.</li>
+            <li>Does not calculate trade performance or journal statistics.</li>
+            <li>The Flask interface is still in development and currently has only a basic UI.</li>
+          </ul>
+        </article>
+
+        <article class="detail-panel">
+          <p class="panel-label">Future Improvements</p>
+          <ul class="detail-list">
+            <li>Store entries in a database instead of separate text files.</li>
+            <li>Add an entry history with search and filtering.</li>
+            <li>Track outcomes, profit and loss, and recurring setup performance.</li>
+            <li>Add authentication before making the journal available online.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section contact-section reveal">
+        <div class="cta-icon" aria-hidden="true">GH</div>
+        <div>
+          <p class="eyebrow">// Source Code</p>
+          <h2>Review the project and its work-in-progress Flask branch.</h2>
+          <p>The repository shows the original journal and the basic Flask interface I am currently developing.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="button primary" href="https://github.com/AlexG2200/trade-journal-cli" target="_blank" rel="noreferrer">View Repository <span aria-hidden="true">-&gt;</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html#top" aria-label="Back to home">
+        <span class="brand-mark"><span>A</span>G</span>
+      </a>
+      <span>&copy; <span id="year"></span> Alex Guzman. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="../index.html#projects">Projects</a>
+        <a href="https://github.com/AlexG2200" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="mailto:guzmanalex06@icloud.com">Email</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>
