@@ -983,10 +983,7 @@ code {
 }
 
 .story-main p:first-child {
-  color: var(--ink);
-  font-size: clamp(1.2rem, 2vw, 1.48rem);
-  font-weight: 750;
-  line-height: 1.45;
+  font-size: clamp(1.08rem, 1.6vw, 1.28rem);
 }
 
 .story-sidebar {
